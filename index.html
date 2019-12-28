@@ -46,23 +46,19 @@
         <ul class="navbar-nav ml-auto text-center">
             
             <li class="nav-item">
-                <a class="nav-link" href="/%E9%A6%96%E9%A1%B5%20/">首页</a>
+                <a class="nav-link" href="/">首页</a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="/%E5%BD%92%E6%A1%A3%E9%A1%B5/archives/">归档</a>
+                <a class="nav-link" href="/archives/">归档</a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="/%E6%A0%87%E7%AD%BE%E5%BD%92%E6%A1%A3%E9%A1%B5/categories/">标签</a>
+                <a class="nav-link" href="/categories/">标签</a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="/%E5%85%B3%E4%BA%8E%E9%A1%B5/tags/">关于</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link" href="/about/">About</a>
+                <a class="nav-link" href="/tags/">关于</a>
             </li>
             
             
@@ -152,7 +148,7 @@
                 <div class="index-excerpt">
                     
                         <div class="index-text mb-1">DBHerlper的概念： 是C# 连接sql server 的类  利用DBHelepr 节省了 c#连接数据库的代码DBHerlper属性和方法:查询方法 cx();增删改方法zsg();
-代码展示12345678910111213141516171819202122SqlConnection con = new SqlConnection(&quot;server =sql库名;database=数据库名字;uid=sa;pwd=密码&quot;);//连接数据库        public  int zsg(string sql)//对数据库执行增删改的方法        &#123;            con.Open();//打开数据库连接            SqlCommand cmd = new SqlCommand(sql,con);//创建执行sql语句的sqlcommand对象          int jg=  cmd.ExecuteNonQuery();//调用sqlcommand 对象的方法执行 sql语句 int变量保存结果            </div>
+代码展示SqlConnection con = new SqlConnection(&quot;server =sql库名;database=数据库名字;uid=sa;pwd=密码&quot;);//连接数据库        public  int zsg(string sql)//对数据库执行增删改的方法        &#123;            con.Open();//打开数据库连接            SqlCommand cmd = new SqlCommand(sql,con);//创建执行sql语句的sqlcommand对象          int jg=  cmd.ExecuteNonQuery();//调用sqlcommand 对象的方法执行 sql语句 int变量保存结果            con.Close();//关闭数据库连接            re</div>
                     
                 </div>
             </a>
@@ -234,7 +230,7 @@
         var typed = new Typed('#subtitle', {
           strings: [
             '  ',
-            "&nbsp;",
+            "时光无限好 不如拼搏一场&nbsp;",
         ],
         cursorChar: "_",
         typeSpeed: 70,
