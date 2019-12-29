@@ -2,31 +2,6 @@
 <search> 
   
   
-    
-    <entry>
-      <title>DBHelper类</title>
-      <link href="undefined2019/08/11/DBHelper%E7%B1%BB/"/>
-      <url>2019/08/11/DBHelper%E7%B1%BB/</url>
-      
-        <content type="html"><![CDATA[<p><strong>DBHerlper的概念：</strong> 是C# 连接sql server 的类  利用DBHelepr 节省了 c#连接数据库的代码<br><strong>DBHerlper属性和方法:</strong><br>查询方法 cx();<br>增删改方法zsg();</p><h2 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SqlConnection con = new SqlConnection(&quot;server =sql库名;database=数据库名字;uid=sa;pwd=密码&quot;);//连接数据库</span><br><span class="line">        public  int zsg(string sql)//对数据库执行增删改的方法</span><br><span class="line">        &#123;</span><br><span class="line">            con.Open();//打开数据库连接</span><br><span class="line">            SqlCommand cmd = new SqlCommand(sql,con);//创建执行sql语句的sqlcommand对象</span><br><span class="line">          int jg=  cmd.ExecuteNonQuery();//调用sqlcommand 对象的方法执行 sql语句 int变量保存结果</span><br><span class="line">            con.Close();//关闭数据库连接</span><br><span class="line">            return jg;//返回执行结果</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        public DataSet cx (string sql)//查询方法</span><br><span class="line">        &#123;</span><br><span class="line">            con.Open();//打开数据库连接</span><br><span class="line">            SqlDataAdapter da = new SqlDataAdapter(sql,con);//创建 sqldataadpter 对象 </span><br><span class="line">            DataSet ds = new DataSet();//接收查询结果</span><br><span class="line">            da.Fill(ds);//调用 fill属性执行查询 把查询结果存储到datase中</span><br><span class="line">            con.Close();//关闭连接</span><br><span class="line">            return ds;//返回查询结果</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure><p>比较简单的写法，没加异常处理 </p><h2 id="注意的地方"><a href="#注意的地方" class="headerlink" title="注意的地方"></a>注意的地方</h2><ol><li>要区分静态和实例的方法的调用 ：静态类的调用：类名.类下面的方法(); 实例类的调用：类名 自己取的名字 =new 类名();  自己取的名字.类的方法</li><li>需要导入 Data.SqlClient; 命名空间 </li><li>记住在执行sql 语句之前一定要打开数据库连接 关闭数据库连接 要在 return前面 </li></ol><p>我也是第一次写博客 有的地方不可能面面俱到 还请谅解</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> c# </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c# </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
   
   
 </search>
